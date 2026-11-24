@@ -1,0 +1,23 @@
+:root { --bg:#f4f6f8; --card:#fff; --text:#1c2733; --muted:#6b7a89; --primary:#0b5cad; --danger:#c0392b; --border:#e1e6eb; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; background:var(--bg); color:var(--text); }
+.container { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
+.card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; margin-bottom:16px; }
+.auth { max-width: 420px; margin: 8vh auto; }
+h1 { font-size: 22px; margin: 0 0 16px; } h2 { font-size: 16px; margin: 0 0 12px; color: var(--primary); }
+label { display:block; font-size:14px; margin: 12px 0 6px; }
+input { width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:8px; font-size:15px; direction:ltr; text-align:right; }
+button { width:100%; margin-top:18px; padding:11px; border:0; border-radius:8px; background:var(--primary); color:#fff; font-size:15px; cursor:pointer; }
+button:disabled { opacity:.6; cursor:wait; }
+button.link { background:none; color:var(--primary); width:auto; margin:0; padding:0; }
+.error { background:#fdecea; color:var(--danger); padding:10px; border-radius:8px; margin-top:12px; font-size:14px; }
+.hint { color:var(--muted); font-size:14px; margin-top:16px; text-align:center; }
+.hint a { color:var(--primary); }
+.topbar { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; }
+.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:12px 24px; }
+.item .k { font-size:12px; color:var(--muted); } .item .v { font-size:15px; margin-top:2px; word-break:break-all; }
+.net { background:var(--primary); color:#fff; border-radius:12px; padding:20px; margin-bottom:16px; }
+.net .k { opacity:.8; font-size:14px; } .net .v { font-size:32px; font-weight:700; margin-top:4px; }
+.radio { display:flex; align-items:center; gap:10px; padding:10px 12px; border:1px solid var(--border); border-radius:8px; margin:8px 0; cursor:pointer; }
+.radio input { width:auto; }
+.masked { direction:ltr; color:var(--muted); margin-inline-start:6px; }
