@@ -114,6 +114,9 @@ exports.sendOtp = asyncWrapper(async (req, res, next) => {
   if (!dest) return next(new AppError('الوسيلة دي غير متاحة', 400));
 
   const otp = await createOtp(nationalId, channel);
+  if (otp.busy) {
+    return next(new AppError('طلب الكود شغال بالفعل، استنى لحظة وحاول تاني', 429, { retryAfter: 3 }));
+  }
   if (otp.cooldown) {
     return next(new AppError(`استنى ${otp.cooldown} ثانية قبل ما تطلب كود جديد`, 429, { retryAfter: otp.cooldown }));
   }
